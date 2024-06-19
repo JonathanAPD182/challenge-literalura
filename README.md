@@ -1,2 +1,2 @@
 # challenge-literalura
-API que consume información sobre libros de la API Gutendex y la registra en una base de datos PostgreSQL para su posterior consulta a través de la consola java, empleando hibernate y JPA. | 
+API que consume información sobre libros de la API Gutendex y la registra en una base de datos PostgreSQL para su posterior consulta a través de la consola java, empleando hibernate y JPA. | API that consumes information about books from the Gutendex API and records it in a PostgreSQL database for later query through the java console, using hibernate and through the java console, using hibernate and JPA.
