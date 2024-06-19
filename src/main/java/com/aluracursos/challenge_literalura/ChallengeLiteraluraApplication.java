@@ -1,0 +1,28 @@
+package com.aluracursos.challenge_literalura;
+
+import com.aluracursos.challenge_literalura.principal.Principal;
+import com.aluracursos.challenge_literalura.repositories.IAutorRepositorio;
+import com.aluracursos.challenge_literalura.repositories.ILibroRepositorio;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ChallengeLiteraluraApplication implements CommandLineRunner {
+
+	@Autowired
+	private ILibroRepositorio repositorioLibro;
+	@Autowired
+	private IAutorRepositorio repositorioAutor;
+
+	public static void main(String[] args) {
+		SpringApplication.run(ChallengeLiteraluraApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Principal principal = new Principal(this.repositorioLibro, this.repositorioAutor);
+		principal.muestraElMenu();
+	}
+}
